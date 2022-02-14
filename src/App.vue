@@ -1,9 +1,10 @@
 <template>
-  <div class="bg-black h-screen">
+  <div class="bg-black text-white h-screen">
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> -->
     <Navbar />
-    <router-view />
+
+    <div class="mt-10"><router-view /></div>
   </div>
 </template>
 
@@ -17,3 +18,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+#app {
+  font-family: "Space Mono", monospace;
+}
+</style>

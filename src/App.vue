@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black text-white h-screen">
+  <div class="bg-black text-white min-h-screen">
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> -->
     <Navbar />
@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
 #app {

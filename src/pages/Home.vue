@@ -7,7 +7,9 @@
         >Maria Halkiewicz</span
       >. I’m freelancer how makes websites.
     </p>
-    <Button>My projects </Button>
+    <Button>
+      <router-link to="/my-projects">My projects</router-link>
+    </Button>
 
     <div class="flex justify-center">
       <img

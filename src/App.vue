@@ -1,20 +1,24 @@
 <template>
   <div class="bg-black text-white min-h-screen">
-    <!-- <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> -->
-    <Navbar />
+    <Navigation />
 
-    <div class="mt-10"><router-view /></div>
+    <div class="mt-10">
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
+import Navigation from "@/components/Navigation.vue";
 
 export default {
   name: "App",
   components: {
-    Navbar,
+    Navigation,
   },
 };
 </script>
@@ -24,5 +28,15 @@ export default {
 
 #app {
   font-family: "Space Mono", monospace;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
 }
 </style>

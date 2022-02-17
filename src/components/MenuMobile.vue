@@ -1,13 +1,20 @@
 <template>
-  <div>
-    <div>
-      <button>
-        <img src="@/assets/images/exit-icon.svg" alt="exit icon" />
+  <div
+    :class="[displayMenuMobile ? 'flex' : 'hidden']"
+    class="flex-col fixed px-4 bg-black z-20"
+  >
+    <div class="flex">
+      <button class="ml-auto">
+        <img
+          @click="handleExitButton"
+          src="@/assets/images/exit-icon.svg"
+          alt="exit icon"
+        />
       </button>
     </div>
-    <ul>
+    <ul class="flex flex-col space-y-5">
       <MenuMobileItem to="my-projects">My projects</MenuMobileItem>
-      <MenuMobileItem to="my-projects">About Me</MenuMobileItem>
+      <MenuMobileItem to="about-me">About Me</MenuMobileItem>
     </ul>
   </div>
 </template>

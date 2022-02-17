@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <Navbar @display-mobile-menu="display" />
-    <MenuMobile
-      class="hidden"
-      @hide-menu="hideMenu"
-      :display-menu-mobile="displayMenuMobile"
-    />
-  </div>
+  <Navbar @display-mobile-menu="showMenu" />
+  <MenuMobile
+    @hide-menu="hideMenu"
+    :display-menu-mobile="displayMenu"
+    class="h-full w-full"
+  />
 </template>
 
 <script>
@@ -23,7 +21,7 @@ export default {
     };
   },
   methods: {
-    display() {
+    showMenu() {
       this.displayMenu = true;
     },
     hideMenu() {
